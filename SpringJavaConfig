@@ -1,0 +1,28 @@
+package com.vinaykolusu.springSample.gitSpringJavaConfig;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.vinaykolusu.springSample.gitSpringJavaConfig.config.AppConfig;
+import com.vinaykolusu.springSample.gitSpringJavaConfig.dao.EmployeeBean;
+import com.vinaykolusu.springSample.gitSpringJavaConfig.dao.ManagerBean;
+
+public class SpringJavaConfig {
+
+	public static void main(String[] args){
+		
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+		EmployeeBean employeeBeanObj = (EmployeeBean) context.getBean("employeeBean");
+		
+		employeeBeanObj.printEmployeeDetails("Spring3 Java Config  Vinay Kolusu" );
+		
+		
+		ManagerBean managerBeanObj = (ManagerBean) context.getBean("managerBean");
+		
+		managerBeanObj.getManager();
+		
+	
+	}
+	
+}
