@@ -1,0 +1,34 @@
+<!-- <beans xmlns="http://www.springfremework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/spring-beans-2.5.xsd"> -->
+	
+	
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+		
+		<import resource="Spring-DIConfig.xml" />
+		
+		<bean id="employeeBean" class="com.vinaykolusu.springSample.gitSpringCore.EmployeeBean">
+			<!-- Setter Injection by using the setter method -->
+		
+			<property name="eName" value="Vinay Kolusu" />
+			<property name="eId"   value="00723" />
+			<property name="eRole" value="C.E.O" />
+ 		
+		</bean>	   
+		
+		
+		<!-- <bean id="outputHelper" class="com.vinaykolusu.springSample.gitSpringCoupling.OutputHelper" >
+			
+			<property name="outputGenerator"  ref="CsvOutputGenerator"/>
+		
+		</bean> -->
+	<!-- 	
+		<bean id="CsvOutputGenerator" class="com.vinaykolusu.springSample.getSpringCore.CvsOutputGenerator" /> -->
+			
+
+</beans>
