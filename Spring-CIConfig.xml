@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+		<bean id="objGenerator" class="com.vinaykolusu.springSample.gitSpringCI.ObjectHelper" >
+			<constructor-arg>
+				<ref bean="EmployeeObjectGenerator" />
+			</constructor-arg>
+		</bean>
+		
+		
+		<bean id="EmployeeObjectGenerator" class="com.vinaykolusu.springSample.gitSpringCI.impl.EmployeeObjectGenerator" />		
+
+</beans>
